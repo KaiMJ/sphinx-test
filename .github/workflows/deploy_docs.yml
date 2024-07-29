@@ -23,10 +23,20 @@ jobs:
         python -m pip install --upgrade pip
         pip install sphinx sphinx-autodoc-typehints sphinx_rtd_theme
 
-    - name: Build the documentation
+    - name: Add source code to documentation
       run: |
         sphinx-apidoc -o doc/source Unreal_Python_5
+        echo "Listing generated .rst files:"
+        ls -la docs/source
+
+    - name: Build the documentation
+      run: |
         sphinx-build -b html doc doc/_build
+      run: |
+        echo "Listing generated HTML files:"
+        ls -la docs/_build
+        
+
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
