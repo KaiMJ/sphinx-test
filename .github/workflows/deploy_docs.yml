@@ -26,7 +26,7 @@ jobs:
     - name: Build the documentation
       run: |
         sphinx-apidoc -o doc/source Unreal_Python_5
-        sphinx-build -b html doc/source doc/_build
+        sphinx-build -b html doc doc/_build
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
