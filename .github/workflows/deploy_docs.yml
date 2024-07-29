@@ -18,10 +18,18 @@ jobs:
       with:
         python-version: '3.x'
 
-    - name: Install dependencies
+    - name: Cache pip dependencies
+      uses: actions/cache@v2
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/doc-requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+
+    - name: Install documentation dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install sphinx sphinx-autodoc-typehints sphinx_rtd_theme
+        pip install -r doc-requirements.txt
 
     - name: Add source code to documentation
       run: |
