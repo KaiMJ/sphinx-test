@@ -27,16 +27,14 @@ jobs:
       run: |
         sphinx-apidoc -o doc/source Unreal_Python_5
         echo "Listing generated .rst files:"
-        ls -la docs/source
+        ls -la doc/source
 
     - name: Build the documentation
       run: |
         sphinx-build -b html doc doc/_build
       run: |
         echo "Listing generated HTML files:"
-        ls -la docs/_build
-        
-
+        ls -la doc/_build
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
