@@ -22,14 +22,18 @@ jobs:
       uses: actions/cache@v2
       with:
         path: ~/.cache/pip
-        key: ${{ runner.os }}-pip-${{ hashFiles('**/doc-requirements.txt') }}
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/docs-requirements.txt') }}
         restore-keys: |
           ${{ runner.os }}-pip-
 
-    - name: Install documentation dependencies
+    - name: Install runtime dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r doc-requirements.txt
+        pip install -r requirements.txt
+
+    - name: Install documentation dependencies
+      run: |
+        pip install -r docs-requirements.txt
 
     - name: Add source code to documentation
       run: |
