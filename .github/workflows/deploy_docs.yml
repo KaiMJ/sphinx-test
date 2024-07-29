@@ -32,7 +32,6 @@ jobs:
     - name: Build the documentation
       run: |
         sphinx-build -b html doc doc/_build
-      run: |
         echo "Listing generated HTML files:"
         ls -la doc/_build
 
