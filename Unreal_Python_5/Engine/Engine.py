@@ -1,6 +1,5 @@
 import socket
 import json
-from Actions import ObjectActions, CameraActions
 
 class UE5_Engine:
     def __init__(self, host="127.0.0.1", port=12345):
@@ -9,6 +8,9 @@ class UE5_Engine:
         self.client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
     def start_client(self):
+        """
+        Start the client
+        """
         try:
             self.client_socket.connect((self.host, self.port))
             self.client_socket.settimeout(3.0)

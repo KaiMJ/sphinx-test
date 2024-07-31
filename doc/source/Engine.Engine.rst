@@ -1,7 +1,5 @@
-test module
-===========
-
-.. automodule:: test
+.. automodule:: Engine.Engine
    :members:
    :undoc-members:
    :show-inheritance:
+   :private-members:
