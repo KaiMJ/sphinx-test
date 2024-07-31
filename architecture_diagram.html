@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Architecture Diagram &mdash; Unreal Python 5 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Unreal_Python_5" href="source/modules.html" />
+    <link rel="prev" title="Prerequisites" href="prerequisites.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Unreal Python 5
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Architecture Diagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source/modules.html">Unreal_Python_5</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Unreal Python 5</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Architecture Diagram</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/architecture_diagram.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="architecture-diagram">
+<h1>Architecture Diagram<a class="headerlink" href="#architecture-diagram" title="Link to this heading"></a></h1>
+<a class="reference internal image-reference" href="_images/UnrealPython_Architecture_Diagram.png"><img alt="Architecture Diagram" class="align-center" src="_images/UnrealPython_Architecture_Diagram.png" style="width: 1200px;" /></a>
+<p>Our architecture design allows us to modify the scene during gameplay, unlike existing Python Unreal Engine APIs.</p>
+<ol class="arabic simple">
+<li><p><strong>UE Function</strong> (C++): Basic operations within Unreal Engine are handled by UE Functions. These can be built-in or custom functions that perform specific tasks such as rendering graphics or processing user inputs.</p></li>
+</ol>
+<p>Example UE functions used:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create new MyObject Class</span>
+<span class="n">GetWorld</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">SpawnActor</span><span class="o">&lt;</span><span class="n">AMyObject</span><span class="o">&gt;</span><span class="p">(</span><span class="n">AMyObject</span><span class="o">::</span><span class="n">StaticClass</span><span class="p">(),</span><span class="w"> </span><span class="n">Location</span><span class="p">,</span><span class="w"> </span><span class="n">Rotation</span><span class="p">,</span><span class="w"> </span><span class="n">SpawnParams</span><span class="p">);</span>
+
+<span class="c1">// Set Object Location</span>
+<span class="n">Object</span><span class="o">-&gt;</span><span class="n">SetActorLocation</span><span class="p">(</span><span class="n">Location</span><span class="p">);</span>
+
+<span class="c1">// Initialize Object Mesh</span>
+<span class="n">UStaticMesh</span><span class="o">*</span><span class="w"> </span><span class="n">Mesh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Cast</span><span class="o">&lt;</span><span class="n">UStaticMesh</span><span class="o">&gt;</span><span class="p">(</span><span class="n">StaticLoadObject</span><span class="p">(</span><span class="n">UStaticMesh</span><span class="o">::</span><span class="n">StaticClass</span><span class="p">(),</span><span class="w"> </span><span class="k">nullptr</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">MeshPath</span><span class="p">));</span>
+
+<span class="c1">// Set MeshComponent to the Object Mesh</span>
+<span class="n">MeshComponent</span><span class="o">-&gt;</span><span class="n">SetStaticMesh</span><span class="p">(</span><span class="n">Mesh</span><span class="p">);</span>
+
+<span class="c1">// Create render target for extracting cameras</span>
+<span class="n">RenderTarget</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateDefaultSubobject</span><span class="o">&lt;</span><span class="n">UTextureRenderTarget2D</span><span class="o">&gt;</span><span class="p">(</span><span class="n">TEXT</span><span class="p">(</span><span class="s">&quot;RenderTarget&quot;</span><span class="p">));</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p><strong>Context Manager</strong> (C++): To manage objects, cameras, characters, and vehicles efficiently, we use Context Managers. They ensure that resources like network connections or file handles are properly allocated and released, maintaining optimal performance and preventing leaks.</p></li>
+</ol>
+<ul class="simple">
+<li><p>ObjectManager</p></li>
+<li><p>CharacterManager</p></li>
+<li><p>CameraManager</p></li>
+<li><p>VehicleManager</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p><strong>TCPServer</strong> (C++): Our architecture includes a TCPServer to facilitate real-time communication between the game and external systems or clients. This server handles network protocols and data exchange in JSON format for scene generation and character actions.</p></li>
+</ol>
+<p>Example JSON data:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;action&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;add_object&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;x&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;y&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;z&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;rotation&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;pitch&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;yaw&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;roll&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;material_path&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Material&#39;/Game/StarterContent/Materials/M_Brick_Clay_New.M_Brick_Clay_New&#39;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;mesh_path&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;StaticMesh&#39;/Game/StarterContent/Shapes/Shape_Pipe_180.Shape_Pipe_180&#39;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;physics&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p><strong>Class UEPython5</strong> (Python): We extend Unreal Engine’s capabilities using Python scripts through UE Python Classes. These classes define custom behaviors and properties for game objects, enabling flexible and dynamic interactions with the Unreal Engine API.</p></li>
+<li><p><strong>Class Scene_Graph</strong> (Python): The Scene Graph Modules manage the hierarchy and organization of objects in the game scene. They ensure proper spatial relationships and rendering order, allowing dynamic modifications during gameplay.</p></li>
+</ol>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="prerequisites.html" class="btn btn-neutral float-left" title="Prerequisites" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="source/modules.html" class="btn btn-neutral float-right" title="Unreal_Python_5" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Kai Kim.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

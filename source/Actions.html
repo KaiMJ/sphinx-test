@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Actions module &mdash; Unreal Python 5 0.1 documentation</title>
+  <title>Actions package &mdash; Unreal Python 5 0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
@@ -21,7 +21,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Engine module" href="Engine.html" />
+    <link rel="next" title="&lt;no title&gt;" href="Actions.CameraActions.html" />
     <link rel="prev" title="Unreal_Python_5" href="modules.html" /> 
 </head>
 
@@ -44,26 +44,21 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Getting Started:</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../architecture_diagram.html">Architecture Diagram</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">Unreal_Python_5</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Actions module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Actions.CameraActions"><code class="docutils literal notranslate"><span class="pre">CameraActions</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#Actions.CameraActions.add_camera"><code class="docutils literal notranslate"><span class="pre">CameraActions.add_camera()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#Actions.CameraActions.take_screenshot"><code class="docutils literal notranslate"><span class="pre">CameraActions.take_screenshot()</span></code></a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Actions package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Actions.CameraActions.html"><code class="docutils literal notranslate"><span class="pre">CameraActions</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="Actions.ObjectActions.html"><code class="docutils literal notranslate"><span class="pre">ObjectActions</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#Actions.ObjectActions"><code class="docutils literal notranslate"><span class="pre">ObjectActions</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#Actions.ObjectActions.add_lighting"><code class="docutils literal notranslate"><span class="pre">ObjectActions.add_lighting()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#Actions.ObjectActions.add_object"><code class="docutils literal notranslate"><span class="pre">ObjectActions.add_object()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#Actions.ObjectActions.change_object"><code class="docutils literal notranslate"><span class="pre">ObjectActions.change_object()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#Actions.ObjectActions.delete_object"><code class="docutils literal notranslate"><span class="pre">ObjectActions.delete_object()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-Actions">Module contents</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="Engine.html">Engine module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="test.html">test module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Engine.html">Engine package</a></li>
 </ul>
 </li>
 </ul>
@@ -83,7 +78,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="modules.html">Unreal_Python_5</a></li>
-      <li class="breadcrumb-item active">Actions module</li>
+      <li class="breadcrumb-item active">Actions package</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/source/Actions.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -93,130 +88,30 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-Actions">
-<span id="actions-module"></span><h1>Actions module<a class="headerlink" href="#module-Actions" title="Link to this heading"></a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="Actions.CameraActions">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Actions.</span></span><span class="sig-name descname"><span class="pre">CameraActions</span></span><a class="headerlink" href="#Actions.CameraActions" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py method">
-<dt class="sig sig-object py" id="Actions.CameraActions.add_camera">
-<span class="sig-name descname"><span class="pre">add_camera</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Actions.CameraActions.add_camera" title="Link to this definition"></a></dt>
-<dd><p>Add a camera to the scene.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – Name of the camera.</p></li>
-<li><p><strong>location</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span>) – Location of the camera as a dictionary {‘x’: value, ‘y’: value, ‘z’: value}.</p></li>
-<li><p><strong>properties</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span>) – Dictionary of properties to set on the camera.</p></li>
+  <section id="actions-package">
+<h1>Actions package<a class="headerlink" href="#actions-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Actions.CameraActions.html"><code class="docutils literal notranslate"><span class="pre">CameraActions</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Actions.CameraActions.html#Actions.CameraActions.CameraActions.add_camera"><code class="docutils literal notranslate"><span class="pre">CameraActions.add_camera()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Actions.CameraActions.html#Actions.CameraActions.CameraActions.take_screenshot"><code class="docutils literal notranslate"><span class="pre">CameraActions.take_screenshot()</span></code></a></li>
 </ul>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span></p>
-</dd>
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Response from the server.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="Actions.CameraActions.take_screenshot">
-<span class="sig-name descname"><span class="pre">take_screenshot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Actions.CameraActions.take_screenshot" title="Link to this definition"></a></dt>
-<dd><p>Capture a screenshot from the scene.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code></span></p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>An Image object of the captured screenshot.</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="Actions.ObjectActions">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Actions.</span></span><span class="sig-name descname"><span class="pre">ObjectActions</span></span><a class="headerlink" href="#Actions.ObjectActions" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py method">
-<dt class="sig sig-object py" id="Actions.ObjectActions.add_lighting">
-<span class="sig-name descname"><span class="pre">add_lighting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Actions.ObjectActions.add_lighting" title="Link to this definition"></a></dt>
-<dd><p>Add lighting to the scene.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – Name of the lighting.</p></li>
-<li><p><strong>location</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></span>) – Location of the lighting as a tuple (x, y, z).</p></li>
-<li><p><strong>properties</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span>) – Dictionary of properties to set on the lighting.</p></li>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Actions.ObjectActions.html"><code class="docutils literal notranslate"><span class="pre">ObjectActions</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Actions.ObjectActions.html#Actions.ObjectActions.ObjectActions.add_lighting"><code class="docutils literal notranslate"><span class="pre">ObjectActions.add_lighting()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Actions.ObjectActions.html#Actions.ObjectActions.ObjectActions.add_object"><code class="docutils literal notranslate"><span class="pre">ObjectActions.add_object()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Actions.ObjectActions.html#Actions.ObjectActions.ObjectActions.change_object"><code class="docutils literal notranslate"><span class="pre">ObjectActions.change_object()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Actions.ObjectActions.html#Actions.ObjectActions.ObjectActions.delete_object"><code class="docutils literal notranslate"><span class="pre">ObjectActions.delete_object()</span></code></a></li>
 </ul>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
-</dd>
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Response message from the server.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="Actions.ObjectActions.add_object">
-<span class="sig-name descname"><span class="pre">add_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mesh_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">material_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">physics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Actions.ObjectActions.add_object" title="Link to this definition"></a></dt>
-<dd><p>Add an object to the scene.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> – Name of the object.</p></li>
-<li><p><strong>location</strong> – Location of the object as a dictionary {‘x’: value, ‘y’: value, ‘z’: value}.</p></li>
-<li><p><strong>rotation</strong> – Rotation of the object as a dictionary {‘pitch’: value, ‘yaw’: value, ‘roll’: value}.</p></li>
-<li><p><strong>scale</strong> – Scale of the object as a dictionary {‘x’: value, ‘y’: value, ‘z’: value}.</p></li>
-<li><p><strong>properties</strong> – Dictionary of properties to set on the object.</p></li>
-<li><p><strong>mesh_path</strong> – Optional path to the mesh asset.</p></li>
-<li><p><strong>material_path</strong> – Optional path to the material asset.</p></li>
-<li><p><strong>physics</strong> – Boolean indicating whether physics should be enabled.</p></li>
+</li>
 </ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>ID of the added object.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="Actions.ObjectActions.change_object">
-<span class="sig-name descname"><span class="pre">change_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Actions.ObjectActions.change_object" title="Link to this definition"></a></dt>
-<dd><p>Change properties of an object in the scene.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>object_id</strong> – ID of the object to change.</p></li>
-<li><p><strong>properties</strong> – Dictionary of properties to update on the object.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Response message from the server.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="Actions.ObjectActions.delete_object">
-<span class="sig-name descname"><span class="pre">delete_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Actions.ObjectActions.delete_object" title="Link to this definition"></a></dt>
-<dd><p>Delete an object from the scene.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>object_id</strong> – ID of the object to delete.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Response message from the server.</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
+</div>
+</section>
+<section id="module-Actions">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-Actions" title="Link to this heading"></a></h2>
+</section>
 </section>
 
 
@@ -224,7 +119,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="modules.html" class="btn btn-neutral float-left" title="Unreal_Python_5" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Engine.html" class="btn btn-neutral float-right" title="Engine module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Actions.CameraActions.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
