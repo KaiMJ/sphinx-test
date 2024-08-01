@@ -37,7 +37,7 @@ jobs:
 
     - name: Add source code to documentation
       run: |
-        sphinx-apidoc -o doc/source Unreal_Python_5
+        sphinx-apidoc -o doc/source Unreal_Python_5 -eEM
         echo "Listing generated .rst files:"
         ls -la doc/source
 
