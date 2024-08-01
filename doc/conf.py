@@ -8,7 +8,7 @@
 
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../Unreal_Python_5'))
+sys.path.insert(0, os.path.abspath('../../Unreal_Python_5'))
 
 project = 'Unreal Python 5'
 copyright = '2024, Kai Kim'
