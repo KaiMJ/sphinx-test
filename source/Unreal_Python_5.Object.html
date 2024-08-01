@@ -50,6 +50,34 @@
 <li class="toctree-l1"><a class="reference internal" href="../architecture_diagram.html">Architecture Diagram</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Unreal Python API:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Unreal_Python_5.Engine.html">UE5_Engine</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">UEObject</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Object.UEObject.get_id"><code class="docutils literal notranslate"><span class="pre">UEObject.get_id()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Object.UEObject.get_info"><code class="docutils literal notranslate"><span class="pre">UEObject.get_info()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Object.UEObject.get_json"><code class="docutils literal notranslate"><span class="pre">UEObject.get_json()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Object.UEObject.get_location"><code class="docutils literal notranslate"><span class="pre">UEObject.get_location()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Object.UEObject.get_material_path"><code class="docutils literal notranslate"><span class="pre">UEObject.get_material_path()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Object.UEObject.get_mesh_path"><code class="docutils literal notranslate"><span class="pre">UEObject.get_mesh_path()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Object.UEObject.get_name"><code class="docutils literal notranslate"><span class="pre">UEObject.get_name()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Object.UEObject.get_physics"><code class="docutils literal notranslate"><span class="pre">UEObject.get_physics()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Object.UEObject.get_rotation"><code class="docutils literal notranslate"><span class="pre">UEObject.get_rotation()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Object.UEObject.get_scale"><code class="docutils literal notranslate"><span class="pre">UEObject.get_scale()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Object.UEObject.move"><code class="docutils literal notranslate"><span class="pre">UEObject.move()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Object.UEObject.set_location"><code class="docutils literal notranslate"><span class="pre">UEObject.set_location()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Object.UEObject.set_material_path"><code class="docutils literal notranslate"><span class="pre">UEObject.set_material_path()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Object.UEObject.set_mesh_path"><code class="docutils literal notranslate"><span class="pre">UEObject.set_mesh_path()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Object.UEObject.set_name"><code class="docutils literal notranslate"><span class="pre">UEObject.set_name()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Object.UEObject.set_physics"><code class="docutils literal notranslate"><span class="pre">UEObject.set_physics()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Object.UEObject.set_rotation"><code class="docutils literal notranslate"><span class="pre">UEObject.set_rotation()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Object.UEObject.set_scale"><code class="docutils literal notranslate"><span class="pre">UEObject.set_scale()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Unreal_Python_5.Camera.html">UECamera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unreal_Python_5.Lighting.html">UELighting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unreal_Python_5.SceneGraph.html">SceneGraph</a></li>
+</ul>
 
         </div>
       </div>
@@ -75,7 +103,220 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  
+  <dl class="py class" id="module-Unreal_Python_5.Object">
+<dt class="sig sig-object py" id="Unreal_Python_5.Object.UEObject">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Unreal_Python_5.Object.</span></span><span class="sig-name descname"><span class="pre">UEObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mesh_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">material_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">physics</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Object.UEObject" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Object.UEObject.get_id">
+<span class="sig-name descname"><span class="pre">get_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Object.UEObject.get_id" title="Link to this definition"></a></dt>
+<dd><p>Get the ID of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The ID of the object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Object.UEObject.get_info">
+<span class="sig-name descname"><span class="pre">get_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Object.UEObject.get_info" title="Link to this definition"></a></dt>
+<dd><p>Get all the information of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A dictionary containing all the information of the object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Object.UEObject.get_json">
+<span class="sig-name descname"><span class="pre">get_json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Object.UEObject.get_json" title="Link to this definition"></a></dt>
+<dd><p>Convert the object to JSON format for sending to a TCP server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>JSON string representing the object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Object.UEObject.get_location">
+<span class="sig-name descname"><span class="pre">get_location</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Object.UEObject.get_location" title="Link to this definition"></a></dt>
+<dd><p>Get the location of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The location of the object as a tuple (x, y, z).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Object.UEObject.get_material_path">
+<span class="sig-name descname"><span class="pre">get_material_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Object.UEObject.get_material_path" title="Link to this definition"></a></dt>
+<dd><p>Get the material path of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The material path of the object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Object.UEObject.get_mesh_path">
+<span class="sig-name descname"><span class="pre">get_mesh_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Object.UEObject.get_mesh_path" title="Link to this definition"></a></dt>
+<dd><p>Get the mesh path of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The mesh path of the object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Object.UEObject.get_name">
+<span class="sig-name descname"><span class="pre">get_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Object.UEObject.get_name" title="Link to this definition"></a></dt>
+<dd><p>Get the name of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The name of the object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Object.UEObject.get_physics">
+<span class="sig-name descname"><span class="pre">get_physics</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Object.UEObject.get_physics" title="Link to this definition"></a></dt>
+<dd><p>Get the physics status of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The physics status of the object (True/False).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Object.UEObject.get_rotation">
+<span class="sig-name descname"><span class="pre">get_rotation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Object.UEObject.get_rotation" title="Link to this definition"></a></dt>
+<dd><p>Get the rotation of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The rotation of the object as a tuple (pitch, yaw, roll).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Object.UEObject.get_scale">
+<span class="sig-name descname"><span class="pre">get_scale</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Object.UEObject.get_scale" title="Link to this definition"></a></dt>
+<dd><p>Get the scale of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The scale of the object as a tuple (x, y, z).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Object.UEObject.move">
+<span class="sig-name descname"><span class="pre">move</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Object.UEObject.move" title="Link to this definition"></a></dt>
+<dd><p>TODO: how to implement this.
+obj.move()
+engine.move(obj) ?</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Object.UEObject.set_location">
+<span class="sig-name descname"><span class="pre">set_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Object.UEObject.set_location" title="Link to this definition"></a></dt>
+<dd><p>Set the location of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The x-coordinate of the location.</p></li>
+<li><p><strong>y</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The y-coordinate of the location.</p></li>
+<li><p><strong>z</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The z-coordinate of the location.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Object.UEObject.set_material_path">
+<span class="sig-name descname"><span class="pre">set_material_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">material_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Object.UEObject.set_material_path" title="Link to this definition"></a></dt>
+<dd><p>Set the material path of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>material_path</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – The new material path of the object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Object.UEObject.set_mesh_path">
+<span class="sig-name descname"><span class="pre">set_mesh_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Object.UEObject.set_mesh_path" title="Link to this definition"></a></dt>
+<dd><p>Set the mesh path of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>mesh_path</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – The new mesh path of the object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Object.UEObject.set_name">
+<span class="sig-name descname"><span class="pre">set_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Object.UEObject.set_name" title="Link to this definition"></a></dt>
+<dd><p>Set the name of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> – The new name of the object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Object.UEObject.set_physics">
+<span class="sig-name descname"><span class="pre">set_physics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">physics</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Object.UEObject.set_physics" title="Link to this definition"></a></dt>
+<dd><p>Set the physics status of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>physics</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></span>) – The new physics status of the object (True/False).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Object.UEObject.set_rotation">
+<span class="sig-name descname"><span class="pre">set_rotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pitch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yaw</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">roll</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Object.UEObject.set_rotation" title="Link to this definition"></a></dt>
+<dd><p>Set the rotation of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pitch</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The pitch of the rotation.</p></li>
+<li><p><strong>yaw</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The yaw of the rotation.</p></li>
+<li><p><strong>roll</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The roll of the rotation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Object.UEObject.set_scale">
+<span class="sig-name descname"><span class="pre">set_scale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Object.UEObject.set_scale" title="Link to this definition"></a></dt>
+<dd><p>Set the scale of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The x-scale of the object.</p></li>
+<li><p><strong>y</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The y-scale of the object.</p></li>
+<li><p><strong>z</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The z-scale of the object.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+
 
            </div>
           </div>

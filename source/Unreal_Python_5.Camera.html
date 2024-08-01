@@ -50,6 +50,35 @@
 <li class="toctree-l1"><a class="reference internal" href="../architecture_diagram.html">Architecture Diagram</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Unreal Python API:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Unreal_Python_5.Engine.html">UE5_Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unreal_Python_5.Object.html">UEObject</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">UECamera</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Camera.UECamera.attach_to_object"><code class="docutils literal notranslate"><span class="pre">UECamera.attach_to_object()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Camera.UECamera.get_fov"><code class="docutils literal notranslate"><span class="pre">UECamera.get_fov()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Camera.UECamera.get_id"><code class="docutils literal notranslate"><span class="pre">UECamera.get_id()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Camera.UECamera.get_image"><code class="docutils literal notranslate"><span class="pre">UECamera.get_image()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Camera.UECamera.get_info"><code class="docutils literal notranslate"><span class="pre">UECamera.get_info()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Camera.UECamera.get_json"><code class="docutils literal notranslate"><span class="pre">UECamera.get_json()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Camera.UECamera.get_location"><code class="docutils literal notranslate"><span class="pre">UECamera.get_location()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Camera.UECamera.get_look_at"><code class="docutils literal notranslate"><span class="pre">UECamera.get_look_at()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Camera.UECamera.get_normal_map"><code class="docutils literal notranslate"><span class="pre">UECamera.get_normal_map()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Camera.UECamera.get_point_cloud"><code class="docutils literal notranslate"><span class="pre">UECamera.get_point_cloud()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Camera.UECamera.get_rotation"><code class="docutils literal notranslate"><span class="pre">UECamera.get_rotation()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Camera.UECamera.get_segmentation"><code class="docutils literal notranslate"><span class="pre">UECamera.get_segmentation()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Camera.UECamera.get_video"><code class="docutils literal notranslate"><span class="pre">UECamera.get_video()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Camera.UECamera.move_around"><code class="docutils literal notranslate"><span class="pre">UECamera.move_around()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Camera.UECamera.set_fov"><code class="docutils literal notranslate"><span class="pre">UECamera.set_fov()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Camera.UECamera.set_location"><code class="docutils literal notranslate"><span class="pre">UECamera.set_location()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Camera.UECamera.set_look_at"><code class="docutils literal notranslate"><span class="pre">UECamera.set_look_at()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Camera.UECamera.set_rotation"><code class="docutils literal notranslate"><span class="pre">UECamera.set_rotation()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Camera.UECamera.zoom_in"><code class="docutils literal notranslate"><span class="pre">UECamera.zoom_in()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Unreal_Python_5.Lighting.html">UELighting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unreal_Python_5.SceneGraph.html">SceneGraph</a></li>
+</ul>
 
         </div>
       </div>
@@ -75,7 +104,283 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  
+  <dl class="py class" id="module-Unreal_Python_5.Camera">
+<dt class="sig sig-object py" id="Unreal_Python_5.Camera.UECamera">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Unreal_Python_5.Camera.</span></span><span class="sig-name descname"><span class="pre">UECamera</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">look_at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fov</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Camera.UECamera" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Camera.UECamera.attach_to_object">
+<span class="sig-name descname"><span class="pre">attach_to_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">look_at</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Camera.UECamera.attach_to_object" title="Link to this definition"></a></dt>
+<dd><p>Attach a camera to a specific object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> – UEObject to attach to.</p></li>
+<li><p><strong>look_at</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]</span>) – The look-at point as a tuple (x, y, z).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Camera.UECamera.get_fov">
+<span class="sig-name descname"><span class="pre">get_fov</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Camera.UECamera.get_fov" title="Link to this definition"></a></dt>
+<dd><p>Get the field of view (FOV) of the camera.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The field of view.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Camera.UECamera.get_id">
+<span class="sig-name descname"><span class="pre">get_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Camera.UECamera.get_id" title="Link to this definition"></a></dt>
+<dd><p>Get the ID of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The ID of the object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Camera.UECamera.get_image">
+<span class="sig-name descname"><span class="pre">get_image</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Camera.UECamera.get_image" title="Link to this definition"></a></dt>
+<dd><p>Capture image from this camera</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>An Image object of the segmentation map.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Camera.UECamera.get_info">
+<span class="sig-name descname"><span class="pre">get_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Camera.UECamera.get_info" title="Link to this definition"></a></dt>
+<dd><p>Get all the information of the camera.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A dictionary containing all the information of the camera.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Camera.UECamera.get_json">
+<span class="sig-name descname"><span class="pre">get_json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Camera.UECamera.get_json" title="Link to this definition"></a></dt>
+<dd><p>Convert the camera to JSON format for sending to a TCP server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>JSON string representing the camera.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Camera.UECamera.get_location">
+<span class="sig-name descname"><span class="pre">get_location</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Camera.UECamera.get_location" title="Link to this definition"></a></dt>
+<dd><p>Get the location of the camera.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The location as a tuple (pitch, yaw, roll).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Camera.UECamera.get_look_at">
+<span class="sig-name descname"><span class="pre">get_look_at</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Camera.UECamera.get_look_at" title="Link to this definition"></a></dt>
+<dd><p>Get the look-at point of the camera.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The look-at point as a tuple (pitch, yaw, roll).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Camera.UECamera.get_normal_map">
+<span class="sig-name descname"><span class="pre">get_normal_map</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Camera.UECamera.get_normal_map" title="Link to this definition"></a></dt>
+<dd><p>Capture a normal map from a specific camera.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code></span></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An Image object of the normal map.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Camera.UECamera.get_point_cloud">
+<span class="sig-name descname"><span class="pre">get_point_cloud</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Camera.UECamera.get_point_cloud" title="Link to this definition"></a></dt>
+<dd><p>Capture a point cloud from a specific camera.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dictionary containing point cloud data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Camera.UECamera.get_rotation">
+<span class="sig-name descname"><span class="pre">get_rotation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Camera.UECamera.get_rotation" title="Link to this definition"></a></dt>
+<dd><p>Get the rotation of the camera.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The rotation as a tuple (pitch, yaw, roll).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Camera.UECamera.get_segmentation">
+<span class="sig-name descname"><span class="pre">get_segmentation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Camera.UECamera.get_segmentation" title="Link to this definition"></a></dt>
+<dd><p>Capture a segmentation map from a specific camera.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code></span></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An Image object of the segmentation map.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Camera.UECamera.get_video">
+<span class="sig-name descname"><span class="pre">get_video</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Camera.UECamera.get_video" title="Link to this definition"></a></dt>
+<dd><p>Capture a video from a specific camera.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Path to the captured video.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Camera.UECamera.move_around">
+<span class="sig-name descname"><span class="pre">move_around</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">look_at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_xyz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Camera.UECamera.move_around" title="Link to this definition"></a></dt>
+<dd><p>Move the camera around in the scene.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>look_at</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span>) – The look-at point as a tuple (x, y, z).</p></li>
+<li><p><strong>end_xyz</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span>) – The end position of the camera as a tuple (pitch, yaw, roll).</p></li>
+<li><p><strong>duration</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span>) – Duration of the movement in seconds.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Response from the server.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Camera.UECamera.set_fov">
+<span class="sig-name descname"><span class="pre">set_fov</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fov</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Camera.UECamera.set_fov" title="Link to this definition"></a></dt>
+<dd><p>Set the field of view (FOV) of the camera.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>fov</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The field of view.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Camera.UECamera.set_location">
+<span class="sig-name descname"><span class="pre">set_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Camera.UECamera.set_location" title="Link to this definition"></a></dt>
+<dd><p>Set the location of the camera.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The x-coordinate of the location.</p></li>
+<li><p><strong>y</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The y-coordinate of the location.</p></li>
+<li><p><strong>z</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The z-coordinate of the location.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Camera.UECamera.set_look_at">
+<span class="sig-name descname"><span class="pre">set_look_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Camera.UECamera.set_look_at" title="Link to this definition"></a></dt>
+<dd><p>Set the look-at point of the camera.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The x-coordinate of the look-at point.</p></li>
+<li><p><strong>y</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The y-coordinate of the look-at point.</p></li>
+<li><p><strong>z</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The z-coordinate of the look-at point.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Camera.UECamera.set_rotation">
+<span class="sig-name descname"><span class="pre">set_rotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pitch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yaw</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">roll</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Camera.UECamera.set_rotation" title="Link to this definition"></a></dt>
+<dd><p>Set the rotation of the camera.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pitch</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The pitch of the rotation.</p></li>
+<li><p><strong>yaw</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The yaw of the rotation.</p></li>
+<li><p><strong>roll</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The roll of the rotation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Camera.UECamera.zoom_in">
+<span class="sig-name descname"><span class="pre">zoom_in</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">distance</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Camera.UECamera.zoom_in" title="Link to this definition"></a></dt>
+<dd><p>Zoom in the camera by a certain distance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>distance</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – Distance to zoom in.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Response from the server.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+
 
            </div>
           </div>

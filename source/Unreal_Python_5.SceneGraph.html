@@ -49,6 +49,22 @@
 <li class="toctree-l1"><a class="reference internal" href="../architecture_diagram.html">Architecture Diagram</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Unreal Python API:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Unreal_Python_5.Engine.html">UE5_Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unreal_Python_5.Object.html">UEObject</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unreal_Python_5.Camera.html">UECamera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unreal_Python_5.Lighting.html">UELighting</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">SceneGraph</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.SceneGraph.SceneGraph.delete_object"><code class="docutils literal notranslate"><span class="pre">SceneGraph.delete_object()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.SceneGraph.SceneGraph.get_scene_info"><code class="docutils literal notranslate"><span class="pre">SceneGraph.get_scene_info()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.SceneGraph.SceneGraph.load_scene"><code class="docutils literal notranslate"><span class="pre">SceneGraph.load_scene()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.SceneGraph.SceneGraph.prompt_to_scene_component"><code class="docutils literal notranslate"><span class="pre">SceneGraph.prompt_to_scene_component()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.SceneGraph.SceneGraph.prompt_to_scene_graph"><code class="docutils literal notranslate"><span class="pre">SceneGraph.prompt_to_scene_graph()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.SceneGraph.SceneGraph.save_scene"><code class="docutils literal notranslate"><span class="pre">SceneGraph.save_scene()</span></code></a></li>
+</ul>
+</li>
+</ul>
 
         </div>
       </div>
@@ -74,7 +90,52 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  
+  <dl class="py class" id="module-Unreal_Python_5.SceneGraph">
+<dt class="sig sig-object py" id="Unreal_Python_5.SceneGraph.SceneGraph">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Unreal_Python_5.SceneGraph.</span></span><span class="sig-name descname"><span class="pre">SceneGraph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prompt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.SceneGraph.SceneGraph" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.SceneGraph.SceneGraph.delete_object">
+<span class="sig-name descname"><span class="pre">delete_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.SceneGraph.SceneGraph.delete_object" title="Link to this definition"></a></dt>
+<dd><p>Delete an object from the scene.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>object_id</strong> – ID of the object to delete.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Response message from the server.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.SceneGraph.SceneGraph.get_scene_info">
+<span class="sig-name descname"><span class="pre">get_scene_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.SceneGraph.SceneGraph.get_scene_info" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.SceneGraph.SceneGraph.load_scene">
+<span class="sig-name descname"><span class="pre">load_scene</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">load_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.SceneGraph.SceneGraph.load_scene" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.SceneGraph.SceneGraph.prompt_to_scene_component">
+<span class="sig-name descname"><span class="pre">prompt_to_scene_component</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.SceneGraph.SceneGraph.prompt_to_scene_component" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.SceneGraph.SceneGraph.prompt_to_scene_graph">
+<span class="sig-name descname"><span class="pre">prompt_to_scene_graph</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.SceneGraph.SceneGraph.prompt_to_scene_graph" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.SceneGraph.SceneGraph.save_scene">
+<span class="sig-name descname"><span class="pre">save_scene</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">save_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.SceneGraph.SceneGraph.save_scene" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+
 
            </div>
           </div>

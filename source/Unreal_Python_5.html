@@ -48,6 +48,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../architecture_diagram.html">Architecture Diagram</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Unreal Python API:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Unreal_Python_5.Engine.html">UE5_Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unreal_Python_5.Object.html">UEObject</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unreal_Python_5.Camera.html">UECamera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unreal_Python_5.Lighting.html">UELighting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unreal_Python_5.SceneGraph.html">SceneGraph</a></li>
+</ul>
 
         </div>
       </div>
@@ -73,11 +81,711 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="unreal-python-5-package">
-<h1>Unreal_Python_5 package<a class="headerlink" href="#unreal-python-5-package" title="Link to this heading"></a></h1>
+  <section id="module-Unreal_Python_5">
+<span id="unreal-python-5-package"></span><h1>Unreal_Python_5 package<a class="headerlink" href="#module-Unreal_Python_5" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="Unreal_Python_5.SceneGraph">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Unreal_Python_5.</span></span><span class="sig-name descname"><span class="pre">SceneGraph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prompt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.SceneGraph" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.SceneGraph.delete_object">
+<span class="sig-name descname"><span class="pre">delete_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.SceneGraph.delete_object" title="Link to this definition"></a></dt>
+<dd><p>Delete an object from the scene.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>object_id</strong> – ID of the object to delete.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Response message from the server.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.SceneGraph.get_scene_info">
+<span class="sig-name descname"><span class="pre">get_scene_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.SceneGraph.get_scene_info" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.SceneGraph.load_scene">
+<span class="sig-name descname"><span class="pre">load_scene</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">load_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.SceneGraph.load_scene" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.SceneGraph.prompt_to_scene_component">
+<span class="sig-name descname"><span class="pre">prompt_to_scene_component</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.SceneGraph.prompt_to_scene_component" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.SceneGraph.prompt_to_scene_graph">
+<span class="sig-name descname"><span class="pre">prompt_to_scene_graph</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.SceneGraph.prompt_to_scene_graph" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.SceneGraph.save_scene">
+<span class="sig-name descname"><span class="pre">save_scene</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">save_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.SceneGraph.save_scene" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Unreal_Python_5.UE5_Engine">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Unreal_Python_5.</span></span><span class="sig-name descname"><span class="pre">UE5_Engine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'127.0.0.1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">12345</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UE5_Engine" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UE5_Engine.receive_response">
+<span class="sig-name descname"><span class="pre">receive_response</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UE5_Engine.receive_response" title="Link to this definition"></a></dt>
+<dd><p>Receive response from the server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The response data as a string.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UE5_Engine.render">
+<span class="sig-name descname"><span class="pre">render</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UE5_Engine.render" title="Link to this definition"></a></dt>
+<dd><p>Render the object(s) by sending their data to the server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>object</strong> – A single instance or a list of instances of UEObject, UECamera, or SceneGraph.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UE5_Engine.send_data">
+<span class="sig-name descname"><span class="pre">send_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UE5_Engine.send_data" title="Link to this definition"></a></dt>
+<dd><p>Send data to the server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span>) – A dictionary containing the data to be sent.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The response from the server.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UE5_Engine.start_client">
+<span class="sig-name descname"><span class="pre">start_client</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UE5_Engine.start_client" title="Link to this definition"></a></dt>
+<dd><p>Start the client and connect to the server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ConnectionRefusedError</strong> – If the server is not available.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UE5_Engine.take_screenshot">
+<span class="sig-name descname"><span class="pre">take_screenshot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UE5_Engine.take_screenshot" title="Link to this definition"></a></dt>
+<dd><p>Capture a screenshot from the scene as seen in the Unreal Editor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code></span></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An Image object of the captured screenshot.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Unreal_Python_5.UECamera">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Unreal_Python_5.</span></span><span class="sig-name descname"><span class="pre">UECamera</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">look_at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fov</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UECamera" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UECamera.attach_to_object">
+<span class="sig-name descname"><span class="pre">attach_to_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">look_at</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UECamera.attach_to_object" title="Link to this definition"></a></dt>
+<dd><p>Attach a camera to a specific object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> – UEObject to attach to.</p></li>
+<li><p><strong>look_at</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]</span>) – The look-at point as a tuple (x, y, z).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UECamera.get_fov">
+<span class="sig-name descname"><span class="pre">get_fov</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UECamera.get_fov" title="Link to this definition"></a></dt>
+<dd><p>Get the field of view (FOV) of the camera.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The field of view.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UECamera.get_id">
+<span class="sig-name descname"><span class="pre">get_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UECamera.get_id" title="Link to this definition"></a></dt>
+<dd><p>Get the ID of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The ID of the object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UECamera.get_image">
+<span class="sig-name descname"><span class="pre">get_image</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UECamera.get_image" title="Link to this definition"></a></dt>
+<dd><p>Capture image from this camera</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>An Image object of the segmentation map.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UECamera.get_info">
+<span class="sig-name descname"><span class="pre">get_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UECamera.get_info" title="Link to this definition"></a></dt>
+<dd><p>Get all the information of the camera.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A dictionary containing all the information of the camera.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UECamera.get_json">
+<span class="sig-name descname"><span class="pre">get_json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UECamera.get_json" title="Link to this definition"></a></dt>
+<dd><p>Convert the camera to JSON format for sending to a TCP server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>JSON string representing the camera.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UECamera.get_location">
+<span class="sig-name descname"><span class="pre">get_location</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UECamera.get_location" title="Link to this definition"></a></dt>
+<dd><p>Get the location of the camera.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The location as a tuple (pitch, yaw, roll).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UECamera.get_look_at">
+<span class="sig-name descname"><span class="pre">get_look_at</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UECamera.get_look_at" title="Link to this definition"></a></dt>
+<dd><p>Get the look-at point of the camera.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The look-at point as a tuple (pitch, yaw, roll).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UECamera.get_normal_map">
+<span class="sig-name descname"><span class="pre">get_normal_map</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UECamera.get_normal_map" title="Link to this definition"></a></dt>
+<dd><p>Capture a normal map from a specific camera.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code></span></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An Image object of the normal map.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UECamera.get_point_cloud">
+<span class="sig-name descname"><span class="pre">get_point_cloud</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UECamera.get_point_cloud" title="Link to this definition"></a></dt>
+<dd><p>Capture a point cloud from a specific camera.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dictionary containing point cloud data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UECamera.get_rotation">
+<span class="sig-name descname"><span class="pre">get_rotation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UECamera.get_rotation" title="Link to this definition"></a></dt>
+<dd><p>Get the rotation of the camera.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The rotation as a tuple (pitch, yaw, roll).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UECamera.get_segmentation">
+<span class="sig-name descname"><span class="pre">get_segmentation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UECamera.get_segmentation" title="Link to this definition"></a></dt>
+<dd><p>Capture a segmentation map from a specific camera.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code></span></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An Image object of the segmentation map.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UECamera.get_video">
+<span class="sig-name descname"><span class="pre">get_video</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UECamera.get_video" title="Link to this definition"></a></dt>
+<dd><p>Capture a video from a specific camera.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Path to the captured video.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UECamera.move_around">
+<span class="sig-name descname"><span class="pre">move_around</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">look_at</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_xyz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UECamera.move_around" title="Link to this definition"></a></dt>
+<dd><p>Move the camera around in the scene.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>look_at</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span>) – The look-at point as a tuple (x, y, z).</p></li>
+<li><p><strong>end_xyz</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span>) – The end position of the camera as a tuple (pitch, yaw, roll).</p></li>
+<li><p><strong>duration</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span>) – Duration of the movement in seconds.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Response from the server.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UECamera.set_fov">
+<span class="sig-name descname"><span class="pre">set_fov</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fov</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UECamera.set_fov" title="Link to this definition"></a></dt>
+<dd><p>Set the field of view (FOV) of the camera.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>fov</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The field of view.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UECamera.set_location">
+<span class="sig-name descname"><span class="pre">set_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UECamera.set_location" title="Link to this definition"></a></dt>
+<dd><p>Set the location of the camera.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The x-coordinate of the location.</p></li>
+<li><p><strong>y</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The y-coordinate of the location.</p></li>
+<li><p><strong>z</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The z-coordinate of the location.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UECamera.set_look_at">
+<span class="sig-name descname"><span class="pre">set_look_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UECamera.set_look_at" title="Link to this definition"></a></dt>
+<dd><p>Set the look-at point of the camera.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The x-coordinate of the look-at point.</p></li>
+<li><p><strong>y</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The y-coordinate of the look-at point.</p></li>
+<li><p><strong>z</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The z-coordinate of the look-at point.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UECamera.set_rotation">
+<span class="sig-name descname"><span class="pre">set_rotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pitch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yaw</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">roll</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UECamera.set_rotation" title="Link to this definition"></a></dt>
+<dd><p>Set the rotation of the camera.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pitch</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The pitch of the rotation.</p></li>
+<li><p><strong>yaw</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The yaw of the rotation.</p></li>
+<li><p><strong>roll</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The roll of the rotation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UECamera.zoom_in">
+<span class="sig-name descname"><span class="pre">zoom_in</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">distance</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UECamera.zoom_in" title="Link to this definition"></a></dt>
+<dd><p>Zoom in the camera by a certain distance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>distance</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – Distance to zoom in.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Response from the server.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Unreal_Python_5.UELighting">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Unreal_Python_5.</span></span><span class="sig-name descname"><span class="pre">UELighting</span></span><a class="headerlink" href="#Unreal_Python_5.UELighting" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UELighting.add_lighting">
+<span class="sig-name descname"><span class="pre">add_lighting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UELighting.add_lighting" title="Link to this definition"></a></dt>
+<dd><p>Add lighting to the scene.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – Name of the lighting.</p></li>
+<li><p><strong>location</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></span>) – Location of the lighting as a tuple (x, y, z).</p></li>
+<li><p><strong>properties</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span>) – Dictionary of properties to set on the lighting.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Response message from the server.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="Unreal_Python_5.UEObject">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Unreal_Python_5.</span></span><span class="sig-name descname"><span class="pre">UEObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mesh_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">material_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">physics</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UEObject" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UEObject.get_id">
+<span class="sig-name descname"><span class="pre">get_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UEObject.get_id" title="Link to this definition"></a></dt>
+<dd><p>Get the ID of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The ID of the object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UEObject.get_info">
+<span class="sig-name descname"><span class="pre">get_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UEObject.get_info" title="Link to this definition"></a></dt>
+<dd><p>Get all the information of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A dictionary containing all the information of the object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UEObject.get_json">
+<span class="sig-name descname"><span class="pre">get_json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UEObject.get_json" title="Link to this definition"></a></dt>
+<dd><p>Convert the object to JSON format for sending to a TCP server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>JSON string representing the object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UEObject.get_location">
+<span class="sig-name descname"><span class="pre">get_location</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UEObject.get_location" title="Link to this definition"></a></dt>
+<dd><p>Get the location of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The location of the object as a tuple (x, y, z).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UEObject.get_material_path">
+<span class="sig-name descname"><span class="pre">get_material_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UEObject.get_material_path" title="Link to this definition"></a></dt>
+<dd><p>Get the material path of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The material path of the object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UEObject.get_mesh_path">
+<span class="sig-name descname"><span class="pre">get_mesh_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UEObject.get_mesh_path" title="Link to this definition"></a></dt>
+<dd><p>Get the mesh path of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The mesh path of the object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UEObject.get_name">
+<span class="sig-name descname"><span class="pre">get_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UEObject.get_name" title="Link to this definition"></a></dt>
+<dd><p>Get the name of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The name of the object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UEObject.get_physics">
+<span class="sig-name descname"><span class="pre">get_physics</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UEObject.get_physics" title="Link to this definition"></a></dt>
+<dd><p>Get the physics status of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The physics status of the object (True/False).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UEObject.get_rotation">
+<span class="sig-name descname"><span class="pre">get_rotation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UEObject.get_rotation" title="Link to this definition"></a></dt>
+<dd><p>Get the rotation of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The rotation of the object as a tuple (pitch, yaw, roll).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UEObject.get_scale">
+<span class="sig-name descname"><span class="pre">get_scale</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UEObject.get_scale" title="Link to this definition"></a></dt>
+<dd><p>Get the scale of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The scale of the object as a tuple (x, y, z).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UEObject.move">
+<span class="sig-name descname"><span class="pre">move</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UEObject.move" title="Link to this definition"></a></dt>
+<dd><p>TODO: how to implement this.
+obj.move()
+engine.move(obj) ?</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UEObject.set_location">
+<span class="sig-name descname"><span class="pre">set_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UEObject.set_location" title="Link to this definition"></a></dt>
+<dd><p>Set the location of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The x-coordinate of the location.</p></li>
+<li><p><strong>y</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The y-coordinate of the location.</p></li>
+<li><p><strong>z</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The z-coordinate of the location.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UEObject.set_material_path">
+<span class="sig-name descname"><span class="pre">set_material_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">material_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UEObject.set_material_path" title="Link to this definition"></a></dt>
+<dd><p>Set the material path of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>material_path</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – The new material path of the object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UEObject.set_mesh_path">
+<span class="sig-name descname"><span class="pre">set_mesh_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UEObject.set_mesh_path" title="Link to this definition"></a></dt>
+<dd><p>Set the mesh path of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>mesh_path</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – The new mesh path of the object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UEObject.set_name">
+<span class="sig-name descname"><span class="pre">set_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UEObject.set_name" title="Link to this definition"></a></dt>
+<dd><p>Set the name of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> – The new name of the object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UEObject.set_physics">
+<span class="sig-name descname"><span class="pre">set_physics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">physics</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UEObject.set_physics" title="Link to this definition"></a></dt>
+<dd><p>Set the physics status of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>physics</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></span>) – The new physics status of the object (True/False).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UEObject.set_rotation">
+<span class="sig-name descname"><span class="pre">set_rotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pitch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yaw</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">roll</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UEObject.set_rotation" title="Link to this definition"></a></dt>
+<dd><p>Set the rotation of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pitch</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The pitch of the rotation.</p></li>
+<li><p><strong>yaw</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The yaw of the rotation.</p></li>
+<li><p><strong>roll</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The roll of the rotation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.UEObject.set_scale">
+<span class="sig-name descname"><span class="pre">set_scale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.UEObject.set_scale" title="Link to this definition"></a></dt>
+<dd><p>Set the scale of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The x-scale of the object.</p></li>
+<li><p><strong>y</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The y-scale of the object.</p></li>
+<li><p><strong>z</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The z-scale of the object.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
 <div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Unreal_Python_5.Camera.html"><code class="docutils literal notranslate"><span class="pre">UECamera</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Camera.html#Unreal_Python_5.Camera.UECamera.attach_to_object"><code class="docutils literal notranslate"><span class="pre">UECamera.attach_to_object()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Camera.html#Unreal_Python_5.Camera.UECamera.get_fov"><code class="docutils literal notranslate"><span class="pre">UECamera.get_fov()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Camera.html#Unreal_Python_5.Camera.UECamera.get_id"><code class="docutils literal notranslate"><span class="pre">UECamera.get_id()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Camera.html#Unreal_Python_5.Camera.UECamera.get_image"><code class="docutils literal notranslate"><span class="pre">UECamera.get_image()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Camera.html#Unreal_Python_5.Camera.UECamera.get_info"><code class="docutils literal notranslate"><span class="pre">UECamera.get_info()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Camera.html#Unreal_Python_5.Camera.UECamera.get_json"><code class="docutils literal notranslate"><span class="pre">UECamera.get_json()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Camera.html#Unreal_Python_5.Camera.UECamera.get_location"><code class="docutils literal notranslate"><span class="pre">UECamera.get_location()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Camera.html#Unreal_Python_5.Camera.UECamera.get_look_at"><code class="docutils literal notranslate"><span class="pre">UECamera.get_look_at()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Camera.html#Unreal_Python_5.Camera.UECamera.get_normal_map"><code class="docutils literal notranslate"><span class="pre">UECamera.get_normal_map()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Camera.html#Unreal_Python_5.Camera.UECamera.get_point_cloud"><code class="docutils literal notranslate"><span class="pre">UECamera.get_point_cloud()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Camera.html#Unreal_Python_5.Camera.UECamera.get_rotation"><code class="docutils literal notranslate"><span class="pre">UECamera.get_rotation()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Camera.html#Unreal_Python_5.Camera.UECamera.get_segmentation"><code class="docutils literal notranslate"><span class="pre">UECamera.get_segmentation()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Camera.html#Unreal_Python_5.Camera.UECamera.get_video"><code class="docutils literal notranslate"><span class="pre">UECamera.get_video()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Camera.html#Unreal_Python_5.Camera.UECamera.move_around"><code class="docutils literal notranslate"><span class="pre">UECamera.move_around()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Camera.html#Unreal_Python_5.Camera.UECamera.set_fov"><code class="docutils literal notranslate"><span class="pre">UECamera.set_fov()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Camera.html#Unreal_Python_5.Camera.UECamera.set_location"><code class="docutils literal notranslate"><span class="pre">UECamera.set_location()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Camera.html#Unreal_Python_5.Camera.UECamera.set_look_at"><code class="docutils literal notranslate"><span class="pre">UECamera.set_look_at()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Camera.html#Unreal_Python_5.Camera.UECamera.set_rotation"><code class="docutils literal notranslate"><span class="pre">UECamera.set_rotation()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Camera.html#Unreal_Python_5.Camera.UECamera.zoom_in"><code class="docutils literal notranslate"><span class="pre">UECamera.zoom_in()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Unreal_Python_5.Engine.html"><code class="docutils literal notranslate"><span class="pre">UE5_Engine</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Engine.html#Unreal_Python_5.Engine.UE5_Engine.receive_response"><code class="docutils literal notranslate"><span class="pre">UE5_Engine.receive_response()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Engine.html#Unreal_Python_5.Engine.UE5_Engine.render"><code class="docutils literal notranslate"><span class="pre">UE5_Engine.render()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Engine.html#Unreal_Python_5.Engine.UE5_Engine.send_data"><code class="docutils literal notranslate"><span class="pre">UE5_Engine.send_data()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Engine.html#Unreal_Python_5.Engine.UE5_Engine.start_client"><code class="docutils literal notranslate"><span class="pre">UE5_Engine.start_client()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Engine.html#Unreal_Python_5.Engine.UE5_Engine.take_screenshot"><code class="docutils literal notranslate"><span class="pre">UE5_Engine.take_screenshot()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Unreal_Python_5.Lighting.html"><code class="docutils literal notranslate"><span class="pre">UELighting</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Lighting.html#Unreal_Python_5.Lighting.UELighting.add_lighting"><code class="docutils literal notranslate"><span class="pre">UELighting.add_lighting()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Unreal_Python_5.Object.html"><code class="docutils literal notranslate"><span class="pre">UEObject</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Object.html#Unreal_Python_5.Object.UEObject.get_id"><code class="docutils literal notranslate"><span class="pre">UEObject.get_id()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Object.html#Unreal_Python_5.Object.UEObject.get_info"><code class="docutils literal notranslate"><span class="pre">UEObject.get_info()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Object.html#Unreal_Python_5.Object.UEObject.get_json"><code class="docutils literal notranslate"><span class="pre">UEObject.get_json()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Object.html#Unreal_Python_5.Object.UEObject.get_location"><code class="docutils literal notranslate"><span class="pre">UEObject.get_location()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Object.html#Unreal_Python_5.Object.UEObject.get_material_path"><code class="docutils literal notranslate"><span class="pre">UEObject.get_material_path()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Object.html#Unreal_Python_5.Object.UEObject.get_mesh_path"><code class="docutils literal notranslate"><span class="pre">UEObject.get_mesh_path()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Object.html#Unreal_Python_5.Object.UEObject.get_name"><code class="docutils literal notranslate"><span class="pre">UEObject.get_name()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Object.html#Unreal_Python_5.Object.UEObject.get_physics"><code class="docutils literal notranslate"><span class="pre">UEObject.get_physics()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Object.html#Unreal_Python_5.Object.UEObject.get_rotation"><code class="docutils literal notranslate"><span class="pre">UEObject.get_rotation()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Object.html#Unreal_Python_5.Object.UEObject.get_scale"><code class="docutils literal notranslate"><span class="pre">UEObject.get_scale()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Object.html#Unreal_Python_5.Object.UEObject.move"><code class="docutils literal notranslate"><span class="pre">UEObject.move()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Object.html#Unreal_Python_5.Object.UEObject.set_location"><code class="docutils literal notranslate"><span class="pre">UEObject.set_location()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Object.html#Unreal_Python_5.Object.UEObject.set_material_path"><code class="docutils literal notranslate"><span class="pre">UEObject.set_material_path()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Object.html#Unreal_Python_5.Object.UEObject.set_mesh_path"><code class="docutils literal notranslate"><span class="pre">UEObject.set_mesh_path()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Object.html#Unreal_Python_5.Object.UEObject.set_name"><code class="docutils literal notranslate"><span class="pre">UEObject.set_name()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Object.html#Unreal_Python_5.Object.UEObject.set_physics"><code class="docutils literal notranslate"><span class="pre">UEObject.set_physics()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Object.html#Unreal_Python_5.Object.UEObject.set_rotation"><code class="docutils literal notranslate"><span class="pre">UEObject.set_rotation()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.Object.html#Unreal_Python_5.Object.UEObject.set_scale"><code class="docutils literal notranslate"><span class="pre">UEObject.set_scale()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Unreal_Python_5.SceneGraph.html"><code class="docutils literal notranslate"><span class="pre">SceneGraph</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.SceneGraph.html#Unreal_Python_5.SceneGraph.SceneGraph.delete_object"><code class="docutils literal notranslate"><span class="pre">SceneGraph.delete_object()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.SceneGraph.html#Unreal_Python_5.SceneGraph.SceneGraph.get_scene_info"><code class="docutils literal notranslate"><span class="pre">SceneGraph.get_scene_info()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.SceneGraph.html#Unreal_Python_5.SceneGraph.SceneGraph.load_scene"><code class="docutils literal notranslate"><span class="pre">SceneGraph.load_scene()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.SceneGraph.html#Unreal_Python_5.SceneGraph.SceneGraph.prompt_to_scene_component"><code class="docutils literal notranslate"><span class="pre">SceneGraph.prompt_to_scene_component()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.SceneGraph.html#Unreal_Python_5.SceneGraph.SceneGraph.prompt_to_scene_graph"><code class="docutils literal notranslate"><span class="pre">SceneGraph.prompt_to_scene_graph()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Unreal_Python_5.SceneGraph.html#Unreal_Python_5.SceneGraph.SceneGraph.save_scene"><code class="docutils literal notranslate"><span class="pre">SceneGraph.save_scene()</span></code></a></li>
+</ul>
+</li>
+</ul>
 </div>
 </section>
 </section>
