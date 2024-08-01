@@ -67,7 +67,7 @@ class UECamera:
         """
         Get the look-at point of the camera.
 
-        :return: The look-at point as a tuple (pitch, yaw, roll).
+        :return: The look-at point as a tuple (x, y, z).
         """
         return self.look_at
 
@@ -137,7 +137,7 @@ class UECamera:
         """
         Capture image from this camera
 
-        :return: An Image object of the segmentation map.
+        :return: An Image object of the current camera.
         """
         pass
 
