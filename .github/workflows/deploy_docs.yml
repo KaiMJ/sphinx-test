@@ -34,6 +34,7 @@ jobs:
     - name: Install documentation dependencies
       run: |
         pip install -r doc-requirements.txt
+        ls -la
 
     - name: Add source code to documentation
       run: |
