@@ -86,14 +86,109 @@
   <section id="quickstart">
 <h1>Quickstart<a class="headerlink" href="#quickstart" title="Link to this heading"></a></h1>
 <ol class="arabic simple">
-<li><p>Connect to the engine</p></li>
+<li><p>Ensure that Unreal Engine is in gameplay and connect to the engine</p></li>
 </ol>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">Unreal_Python_5</span> <span class="kn">import</span> <span class="n">UE5_Engine</span>
+
+<span class="n">engine</span> <span class="o">=</span> <span class="n">UE5_engine</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">12345</span><span class="p">)</span>
+<span class="c1"># make sure ATCPServer is inside the Unreal Engine and the game is running!!!</span>
+<span class="n">engine</span><span class="o">.</span><span class="n">start_client</span><span class="p">()</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
-<li></li>
+<li><p>Add Object.</p></li>
 </ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">Unreal_Python_5</span> <span class="kn">import</span> <span class="n">UEObject</span>
+
+<span class="n">obj</span> <span class="o">=</span> <span class="n">UEObject</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;chair&quot;</span><span class="p">,</span>
+        <span class="n">location</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+        <span class="n">rotation</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+        <span class="n">scale</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+        <span class="n">mesh_path</span><span class="o">=</span><span class="s2">&quot;/path/to/mesh&quot;</span><span class="p">,</span>
+        <span class="n">material_path</span><span class="o">=</span><span class="s2">&quot;/path/to/material&quot;</span><span class="p">,</span>
+        <span class="n">physics</span><span class="o">=</span><span class="kc">True</span>
+    <span class="p">)</span>
+
+<span class="c1"># call engine.render</span>
+<span class="n">engine</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+
+<span class="n">obj</span><span class="o">.</span><span class="n">get_id</span><span class="p">()</span> <span class="c1"># int: id</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">get_name</span><span class="p">()</span> <span class="c1"># str: name</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">get_location</span><span class="p">()</span> <span class="c1"># tuple: (x, y, z)</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">get_rotation</span><span class="p">()</span> <span class="c1"># tuple: (yaw, roll, pitch)</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">get_scale</span><span class="p">()</span> <span class="c1"># tuple: (x, y, z)</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">get_mesh_path</span><span class="p">()</span> <span class="c1"># str: mesh path</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">get_material_path</span><span class="p">()</span> <span class="c1"># str: material path</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">get_physics</span><span class="p">()</span> <span class="c1"># bool: True / False</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">get_info</span><span class="p">()</span> <span class="c1"># JSON dict of all the info</span>
+
+<span class="n">obj</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s2">&quot;blue chair&quot;</span><span class="p">)</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">set_location</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">set_rotation</span><span class="p">(</span><span class="n">pitch</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">yaw</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">roll</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">set_scale</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">set_mesh_path</span><span class="p">(</span><span class="s2">&quot;/path/to/new/mesh&quot;</span><span class="p">)</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">set_material_path</span><span class="p">(</span><span class="s2">&quot;/path/to/new/material&quot;</span><span class="p">)</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">set_physics</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># call engine.render again to make changes</span>
+<span class="n">engine</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Add Camera</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">Unreal_Python_5</span> <span class="kn">import</span> <span class="n">UECamera</span>
+
+<span class="n">camera</span> <span class="o">=</span> <span class="n">UECamera</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;chair&quot;</span><span class="p">,</span>
+        <span class="n">location</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+        <span class="n">rotation</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+        <span class="n">look_at</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+        <span class="n">fov</span><span class="o">=</span><span class="mi">10</span>
+    <span class="p">)</span>
+
+<span class="c1"># call engine.render</span>
+<span class="n">engine</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">camera</span><span class="p">)</span>
+
+<span class="n">camera</span><span class="o">.</span><span class="n">get_id</span><span class="p">()</span> <span class="c1"># int: id</span>
+<span class="n">camera</span><span class="o">.</span><span class="n">get_location</span><span class="p">()</span> <span class="c1"># tuple: (x, y, z)</span>
+<span class="n">camera</span><span class="o">.</span><span class="n">get_rotation</span><span class="p">()</span> <span class="c1"># tuple: (yaw, roll, pitch)</span>
+<span class="n">camera</span><span class="o">.</span><span class="n">get_look_at</span><span class="p">()</span> <span class="c1"># tuple: (x, y, z)</span>
+<span class="n">camera</span><span class="o">.</span><span class="n">get_fov</span><span class="p">()</span> <span class="c1"># float: fov</span>
+<span class="n">camera</span><span class="o">.</span><span class="n">get_info</span><span class="p">()</span> <span class="c1"># JSON dict of all the info</span>
+
+<span class="n">camera</span><span class="o">.</span><span class="n">set_location</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">camera</span><span class="o">.</span><span class="n">set_rotation</span><span class="p">(</span><span class="n">pitch</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">yaw</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">roll</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">camera</span><span class="o">.</span><span class="n">set_look_at</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">camera</span><span class="o">.</span><span class="n">set_fov</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># call engine.render again to make changes</span>
+<span class="n">engine</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">camera</span><span class="p">)</span>
+
+<span class="n">camera</span><span class="o">.</span><span class="n">get_image</span><span class="p">()</span> <span class="c1"># returns Image object of the current camera</span>
+<span class="c1"># TODO:</span>
+<span class="n">camera</span><span class="o">.</span><span class="n">get_segmentation</span><span class="p">()</span>
+<span class="n">camera</span><span class="o">.</span><span class="n">get_point_cloud</span><span class="p">()</span>
+<span class="n">camera</span><span class="o">.</span><span class="n">get_normal_map</span><span class="p">()</span>
+<span class="n">camera</span><span class="o">.</span><span class="n">get_video</span><span class="p">()</span>
+<span class="n">camera</span><span class="o">.</span><span class="n">attach_to_object</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">look_at</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="n">camera</span><span class="o">.</span><span class="n">move_around</span><span class="p">(</span><span class="n">look_at</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">end_xyz</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">duration</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">camera</span><span class="o">.</span><span class="n">zoom_in</span><span class="p">()</span>
+<span class="n">engine</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">camera</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>#TODO: Add SceneGraph</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">Unreal_Python_5</span> <span class="kn">import</span> <span class="n">SceneGraph</span>
+<span class="n">cigar_room_scene</span> <span class="o">=</span> <span class="n">SceneGraph</span><span class="p">(</span><span class="s2">&quot;Create a cigar room scene.&quot;</span><span class="p">)</span>
+
+<span class="n">cigar_room_scene</span><span class="o">.</span><span class="n">save_scene</span><span class="p">(</span><span class="s2">&quot;cigar_room.json&quot;</span><span class="p">)</span>
+
+<span class="n">cigar_room_scene</span><span class="o">.</span><span class="n">load_scene</span><span class="p">(</span><span class="s2">&quot;cigar_room.json&quot;</span><span class="p">)</span>
+
+<span class="n">engine</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">cigar_room_scene</span><span class="p">)</span>
+</pre></div>
+</div>
 </section>
 
 
