@@ -8,11 +8,8 @@
 
 import os
 import sys
-# Get the absolute path to the directory containing conf.py
-current_dir = os.path.abspath(os.path.dirname(__file__))
 
-# Add the path to the `Unreal_Python_5` module to sys.path
-sys.path.insert(0, os.path.abspath(os.path.join(current_dir, '../../Unreal_Python_5')))
+sys.path.insert(0, os.path.abspath('../..'))
 
 project = 'Unreal Python 5'
 copyright = '2024, Kai Kim'
