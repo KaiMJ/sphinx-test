@@ -19,4 +19,5 @@ Python API for generating scenes in Unreal Engine 5.
    UEObject <source/Unreal_Python_5.Object>
    UECamera <source/Unreal_Python_5.Camera>
    UELighting <source/Unreal_Python_5.Lighting>
+   UECharacter <source/Unreal_Python_5.Character>
    SceneGraph <source/Unreal_Python_5.SceneGraph>
