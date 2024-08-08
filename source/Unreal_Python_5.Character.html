@@ -51,11 +51,27 @@
 <li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Unreal Python API:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Unreal_Python_5.Engine.html">UE5_Engine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Unreal_Python_5.Object.html">UEObject</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Unreal_Python_5.Camera.html">UECamera</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Unreal_Python_5.Lighting.html">UELighting</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">UECharacter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Character.UECharacter.close_back_trunk"><code class="docutils literal notranslate"><span class="pre">UECharacter.close_back_trunk()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Character.UECharacter.drive_to_location"><code class="docutils literal notranslate"><span class="pre">UECharacter.drive_to_location()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Character.UECharacter.drop_down"><code class="docutils literal notranslate"><span class="pre">UECharacter.drop_down()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Character.UECharacter.enter_vehicle"><code class="docutils literal notranslate"><span class="pre">UECharacter.enter_vehicle()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Character.UECharacter.exit_vehicle"><code class="docutils literal notranslate"><span class="pre">UECharacter.exit_vehicle()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Character.UECharacter.move_character_along_direction"><code class="docutils literal notranslate"><span class="pre">UECharacter.move_character_along_direction()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Character.UECharacter.move_character_to_location"><code class="docutils literal notranslate"><span class="pre">UECharacter.move_character_to_location()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Character.UECharacter.move_character_to_object"><code class="docutils literal notranslate"><span class="pre">UECharacter.move_character_to_object()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Character.UECharacter.move_character_towards_location"><code class="docutils literal notranslate"><span class="pre">UECharacter.move_character_towards_location()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Character.UECharacter.move_character_towards_object"><code class="docutils literal notranslate"><span class="pre">UECharacter.move_character_towards_object()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Character.UECharacter.open_back_trunk"><code class="docutils literal notranslate"><span class="pre">UECharacter.open_back_trunk()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Character.UECharacter.pass_door"><code class="docutils literal notranslate"><span class="pre">UECharacter.pass_door()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Unreal_Python_5.Character.UECharacter.pick_object"><code class="docutils literal notranslate"><span class="pre">UECharacter.pick_object()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Unreal_Python_5.SceneGraph.html">SceneGraph</a></li>
 </ul>
 
@@ -83,7 +99,208 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  
+  <dl class="py class" id="module-Unreal_Python_5.Character">
+<dt class="sig sig-object py" id="Unreal_Python_5.Character.UECharacter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Unreal_Python_5.Character.</span></span><span class="sig-name descname"><span class="pre">UECharacter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotation</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Character.UECharacter" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Character.UECharacter.close_back_trunk">
+<span class="sig-name descname"><span class="pre">close_back_trunk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vehicle_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Character.UECharacter.close_back_trunk" title="Link to this definition"></a></dt>
+<dd><p>close the back trunk of the vehicle.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>vehicle_id</strong> – Target vehicle’s vehicle id.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Whether close the trunk successfully as a bool.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Character.UECharacter.drive_to_location">
+<span class="sig-name descname"><span class="pre">drive_to_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">location</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Character.UECharacter.drive_to_location" title="Link to this definition"></a></dt>
+<dd><p>Drive the car to target location
+:type location: 
+:param location: Target location as a tuple (x, y, z) or (x, y).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>character’s final location as tuple(x, y, z)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Character.UECharacter.drop_down">
+<span class="sig-name descname"><span class="pre">drop_down</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Character.UECharacter.drop_down" title="Link to this definition"></a></dt>
+<dd><p>Drop down the object character is holding
+Note: Now character can hold an object in right hand so we don’t need to specify which hand</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Whether drop down the object successfully as a bool.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Character.UECharacter.enter_vehicle">
+<span class="sig-name descname"><span class="pre">enter_vehicle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vehicle_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Character.UECharacter.enter_vehicle" title="Link to this definition"></a></dt>
+<dd><p>Enter the vehicle.
+Note: Currently, character can only enter the front two doors as driver.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>vehicle_id</strong> – Target vehicle’s vehicle id.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Whether enter the vehicle successfully as a bool.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Character.UECharacter.exit_vehicle">
+<span class="sig-name descname"><span class="pre">exit_vehicle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Character.UECharacter.exit_vehicle" title="Link to this definition"></a></dt>
+<dd><p>Exit the vehicle.
+Note: Character are allowed to exit the vehilce only if the car is fully stopped.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Whether exit the vehicle successfully as a bool.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Character.UECharacter.move_character_along_direction">
+<span class="sig-name descname"><span class="pre">move_character_along_direction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">direction</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">150</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Character.UECharacter.move_character_along_direction" title="Link to this definition"></a></dt>
+<dd><p>Move the character along direction with one step.
+Note: If there’s an obstacle in the way, character will stop at the obstacle.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>direction</strong> – 4 directions are supplied. “forward” , “backward”, “left” and “right”</p>
+</dd>
+</dl>
+<p>represents the forward, backward, left and right direction of the character.
+:type step_size: 
+:param step_size: Step size of this step. In default, it’s set as 150.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Character’s final location as tuple(x, y, z)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Character.UECharacter.move_character_to_location">
+<span class="sig-name descname"><span class="pre">move_character_to_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">location</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Character.UECharacter.move_character_to_location" title="Link to this definition"></a></dt>
+<dd><p>Move the character to a specific location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>location</strong> – Target location as a tuple (x, y, z) or (x, y).</p>
+</dd>
+</dl>
+<p>Note: User doesn’t have to specify the z location, engine will deal with that value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>character’s final location as tuple(x, y, z)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Character.UECharacter.move_character_to_object">
+<span class="sig-name descname"><span class="pre">move_character_to_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Character.UECharacter.move_character_to_object" title="Link to this definition"></a></dt>
+<dd><p>Move the character to a specific object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>object_id</strong> – Target object’s object id.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Character’s final location as tuple(x, y, z)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Character.UECharacter.move_character_towards_location">
+<span class="sig-name descname"><span class="pre">move_character_towards_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">150</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Character.UECharacter.move_character_towards_location" title="Link to this definition"></a></dt>
+<dd><p>Move the character towards a specific location with one step.
+Note: Character will move along the correct path created by navigation system instead of
+along the direct direction to the location</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>location</strong> – Target location as tuple (x, y, z) or (x, y).</p></li>
+<li><p><strong>step_size</strong> – Step size of this step. In default, it’s set as 150.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Character’s final location as tuple(x, y, z)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Character.UECharacter.move_character_towards_object">
+<span class="sig-name descname"><span class="pre">move_character_towards_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">150</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Character.UECharacter.move_character_towards_object" title="Link to this definition"></a></dt>
+<dd><p>Move the character towards a specific object with one step.
+Note: the character will move along the correct path created by navigation system instead of
+along the direct direction to the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>object_id</strong> – Target object’s object id.</p></li>
+<li><p><strong>step_size</strong> – Step size of this step. In default, it’s set as 150.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Character’s final location as tuple(x, y, z)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Character.UECharacter.open_back_trunk">
+<span class="sig-name descname"><span class="pre">open_back_trunk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vehicle_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Character.UECharacter.open_back_trunk" title="Link to this definition"></a></dt>
+<dd><p>Open the back trunk of the vehicle.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>vehicle_id</strong> – Target vehicle’s vehicle id.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Whether open the trunk successfully as a bool.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Character.UECharacter.pass_door">
+<span class="sig-name descname"><span class="pre">pass_door</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Character.UECharacter.pass_door" title="Link to this definition"></a></dt>
+<dd><p>Pass the door.
+:type object_id: 
+:param object_id: Target door’s object id.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Whether pass the door successfully as a bool.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Unreal_Python_5.Character.UECharacter.pick_object">
+<span class="sig-name descname"><span class="pre">pick_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Unreal_Python_5.Character.UECharacter.pick_object" title="Link to this definition"></a></dt>
+<dd><p>Pick up object.
+:type object_id: 
+:param object_id: Target object’s object id.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Whether pick up the object successfully as a bool.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+
 
            </div>
           </div>
